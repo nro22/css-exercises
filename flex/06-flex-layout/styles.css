@@ -5,6 +5,7 @@ body {
   margin: 0;
   overflow: hidden;
   font-family: Roboto, sans-serif;
+  max-width: 944px;
   border: 2px solid red;
 }
 
@@ -26,6 +27,13 @@ input {
   width: 400px;
 }
 
+/* solution */
+
+html{
+  position: relative;
+  min-height: 100%;
+}
+
 body{
   display: flex;
   flex-direction: column;
@@ -34,16 +42,14 @@ body{
 
 .header, .footer, .left-links , .right-links{
   display: flex;
+}
+
+.header , .footer{
   justify-content: space-between;
 }
 
-.content{
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 16px;
+ul{
+  list-style-type: none;
 }
 
 li + li{
@@ -51,13 +57,15 @@ li + li{
 }
 
 .footer{
-  background-color: #eee;
+  background-color: #eeeeee;
+  align-content:last baseline;
+  position: absolute;
+  bottom: 0;
+  width: 944px;
+
 }
 
-ul{
-  list-style-type: none;
-}
 a{
-  color: #666;
+  color: #A9A9A9;
   text-decoration: none;
 }
